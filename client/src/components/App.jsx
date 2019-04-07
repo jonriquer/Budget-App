@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Button} from 'react-bootstrap';
 
 class App extends Component {
 
@@ -121,9 +122,9 @@ class App extends Component {
             placeholder="add something in the database"
             style={{ width: '200px' }}
           />
-          <button onClick={() => this.putDataToDB(this.state.message)}>
+          <Button onClick={() => this.putDataToDB(this.state.message)}>
             ADD
-          </button>
+          </Button>
         </div>
         <div style={{ padding: '10px' }}>
           <input
