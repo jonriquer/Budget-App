@@ -47,16 +47,3 @@ $Raleway: 'Raleway', sans-serif;
   background-color: white;
   margin: 75px 0 0 0;
 }
-.inputWrapper input {
-  height: 2em;
-  font-family: $Raleway;
-  font-weight: 800;
-}
-::placeholder {
-  padding: 5px;
-}
-.inputWrapper button {
-  height: 2em;
-  width: 3em;
-  background-color: rgb(56, 166, 252);
-}
