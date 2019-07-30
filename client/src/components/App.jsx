@@ -103,60 +103,68 @@ class App extends Component {
   render() {
     const { data } = this.state;
     return (
-      <div>
-        <ul>
-          {data.length <= 0
-            ? 'NO DB ENTRIES YET'
-            : data.map((dat) => (
+      <div class='compCont'>
+        <div class='listCont'>
+          <h1 class='title'>Entries</h1>
+          <ul id='entriesList'>
+            {
+              data.length <= 0 ?
+              'NO DB ENTRIES YET'
+              : 
+              data.map( (dat) => (
                 <li style={{ padding: '10px' }} key={data.message}>
                   <span style={{ color: 'gray' }}> id: </span> {dat.id} <br />
                   <span style={{ color: 'gray' }}> data: </span>
                   {dat.message}
                 </li>
-              ))}
-        </ul>
-        <div style={{ padding: '10px' }}>
-          <input
-            type="text"
-            onChange={(e) => this.setState({ message: e.target.value })}
-            placeholder="add something in the database"
-            style={{ width: '200px' }}
-          />
-          <Button onClick={() => this.putDataToDB(this.state.message)}>
-            ADD
-          </Button>
-        </div>
-        <div style={{ padding: '10px' }}>
-          <input
-            type="text"
-            style={{ width: '200px' }}
-            onChange={(e) => this.setState({ idToDelete: e.target.value })}
-            placeholder="put id of item to delete here"
-          />
-          <button onClick={() => this.deleteFromDB(this.state.idToDelete)}>
-            DELETE
-          </button>
-        </div>
-        <div style={{ padding: '10px' }}>
-          <input
-            type="text"
-            style={{ width: '200px' }}
-            onChange={(e) => this.setState({ idToUpdate: e.target.value })}
-            placeholder="id of item to update here"
-          />
-          <input
-            type="text"
-            style={{ width: '200px' }}
-            onChange={(e) => this.setState({ updateToApply: e.target.value })}
-            placeholder="put new value of the item here"
-          />
-          <button
-            onClick={() =>
-              this.updateDB(this.state.idToUpdate, this.state.updateToApply)
+              ))
             }
-          >
-            UPDATE
-          </button>
+          </ul>
+        </div>
+        <div class='formCont'>
+          <div class='inputWrapper' style={{ padding: '10px' }}>
+            <input
+              type="text"
+              onChange={(e) => this.setState({ message: e.target.value })}
+              placeholder="Enter Content"
+              style={{ width: '200px' }}
+            />
+            <Button onClick={() => this.putDataToDB(this.state.message)}>
+              ADD
+            </Button>
+          </div>
+          <div class='inputWrapper' style={{ padding: '10px' }}>
+            <input
+              type="text"
+              style={{ width: '200px' }}
+              onChange={(e) => this.setState({ idToDelete: e.target.value })}
+              placeholder="Enter I.D."
+            />
+            <button onClick={() => this.deleteFromDB(this.state.idToDelete)}>
+              DELETE
+            </button>
+          </div>
+          <div class='inputWrapper' style={{ padding: '10px' }}>
+            <input
+              type="text"
+              style={{ width: '200px' }}
+              onChange={(e) => this.setState({ idToUpdate: e.target.value })}
+              placeholder="Enter I.D."
+            />
+            <input
+              type="text"
+              style={{ width: '200px' }}
+              onChange={(e) => this.setState({ updateToApply: e.target.value })}
+              placeholder="Enter new content"
+            />
+            <button
+              onClick={() =>
+                this.updateDB(this.state.idToUpdate, this.state.updateToApply)
+              }
+            >
+              UPDATE
+            </button>
+          </div>
         </div>
       </div>
     );
