@@ -67,3 +67,8 @@ $Raleway: 'Raleway', sans-serif;
   background-color: rgb(56, 166, 252);
   border: none;
 }
+.updateInputCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
