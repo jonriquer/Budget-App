@@ -66,6 +66,12 @@ $Raleway: 'Raleway', sans-serif;
   width: 75px;
   background-color: rgb(56, 166, 252);
   border: none;
+  transition: all .2s;
+}
+.inputWrapper button:hover {
+  background-color: rgba(56, 166, 252,.5);
+  
+
 }
 .updateInputCont {
   display: flex;
