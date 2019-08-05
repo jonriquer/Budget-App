@@ -46,6 +46,7 @@ $Raleway: 'Raleway', sans-serif;
   box-shadow: 5px 5px 25px 15px rgba(85,87,89,.1);
   background-color: white;
   margin: 75px 0 0 0;
+  padding: 50px;
 }
 .inputWrapper {
   padding: 10px;
@@ -58,6 +59,7 @@ $Raleway: 'Raleway', sans-serif;
   font-family: $Raleway;
   font-weight: 800;
   margin: 5px;
+  border: 1px solid #c8c8c8;
 }
 ::placeholder {
   padding: 5px;
@@ -67,6 +69,8 @@ $Raleway: 'Raleway', sans-serif;
   width: 75px;
   background-color: rgb(56, 166, 252);
   border: none;
+  font-family: $Raleway;
+  font-weight: 500;
   transition: all .2s;
 }
 .inputWrapper button:hover {
