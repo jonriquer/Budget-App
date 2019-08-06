@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Button} from 'react-bootstrap';
+import Chart from './Chart.js';
 
 class App extends Component {
 
@@ -121,6 +122,9 @@ class App extends Component {
             }
           </ul>
         </div>
+
+        <Chart />
+
         <div class='formCont'>
           <div class='inputWrapper' style={{ padding: '10px' }}>
             <input

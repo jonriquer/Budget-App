@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "chart.js": "^2.9.3",
+    "concurrently": "^4.1.0",
+    "react-chartjs-2": "^2.9.0"
   },
   "description": ""
 }
